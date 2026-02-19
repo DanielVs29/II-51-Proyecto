@@ -1,0 +1,47 @@
+classDiagram
+direction LR
+
+class Negocio {
+  +int IdNegocio
+  +string Nombre
+  +string Tipo
+  +string Direccion
+  +bool Activo
+}
+
+class Usuario {
+  +int IdUsuario
+  +string Nombre
+  +string Correo
+  +string Rol
+  +bool Activo
+}
+
+class Cliente {
+  +int IdCliente
+  +string Telefono
+  +bool Activo
+}
+
+class Servicio {
+  +int IdServicio
+  +string Nombre
+  +int DuracionMin
+  +decimal Precio
+  +bool Activo
+}
+
+class Cita {
+  +int IdCita
+  +date Fecha
+  +time HoraInicio
+  +string Estado
+}
+
+Negocio "1" --> "1..*" Usuario : tiene
+Negocio "1" --> "1..*" Servicio : ofrece
+Negocio "1" --> "0..*" Cita : recibe
+
+Usuario "1" --> "0..*" Cita : atiende
+Cliente "1" --> "0..*" Cita : agenda
+Servicio "1" --> "0..*" Cita : corresponde
