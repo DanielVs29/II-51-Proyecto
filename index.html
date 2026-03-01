@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de citas</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="logo-titulo">
+    <i class="fi fi-brands-yelp"></i>
+    <h1 class="title">Sistema de citas</h1>
+  </div>
+
+
+  <nav class="nav-menu">
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="localidades.html">Localidades</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+    <section class="registro">
+
+    <h2>Registro de cita</h2>
+
+    <form action="#" method="post">
+
+    <fieldset>
+
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="fecha">Fecha de la cita</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="hora">Hora</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <button type="submit">Agendar cita</button>
+    </fieldset>
+
+  </form>
+</section>
+
+<section class="tabla">
+
+  <h2 >Citas registradas</h2>
+
+  <table class="tabla-citas">
+
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Juan Pérez</td>
+        <td>8888-8888</td>
+        <td>2026-02-25</td>
+        <td>10:00</td>
+        <td>Reservada</td>
+      </tr>
+
+      <tr>
+        <td>Ana López</td>
+        <td>8777-1234</td>
+        <td>2026-02-25</td>
+        <td>11:00</td>
+        <td>Reservada</td>
+      </tr>
+    </tbody>
+
+  </table>
+</section>
+
+
+
+    
+</body>
+
+
+</html>

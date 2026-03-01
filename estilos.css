@@ -1,0 +1,186 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background-color: rgb(127, 204, 255);
+}
+
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-titulo i {
+  font-size: 50px;
+  color: #2c2c2c;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+  color: #2c2c2c;
+  font-family: 'Arial', sans-serif;
+  padding: 5px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/*  -------------------- */
+
+.registro {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.registro form fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.registro h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registro-cita form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.registro label {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.registro input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.registro button {
+  margin-top: 10px;
+  padding: 12px;
+
+  background-color: #2c2c2c;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.registro button:hover {
+  background-color: #444;
+}
+
+/*  -------------------- */
+
+.tabla {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.tabla h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.tabla-citas {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-citas th,
+.tabla-citas td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  
+}
+
+.tabla-citas th {
+  background-color: #f3f3f3;
+}
+
+
+/*  -------------------- */
+
+.login {
+  max-width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.login h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login label {
+  font-size: 16px;
+}
+
+.login input {
+  padding: 8px;
+  font-size: 14px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  box-sizing: border-box;
+}
+
+.login button {
+  margin-top: 10px;
+  padding: 10px;
+
+  background-color: #2c2c2c;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #444;
+}
