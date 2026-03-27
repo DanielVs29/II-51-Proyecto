@@ -30,27 +30,36 @@
 
 </header>
 
-    <section class="registro">
+<section class="registro">
 
-    <h2>Registro de cita</h2>
+  <h2 id="tituloForm">Registro de cita</h2>
 
-    <form action="#" method="post">
-
+  <form id="formCita">
     <fieldset>
 
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required>
+      <input type="hidden" id="txtId" />
 
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono" name="telefono" required>
+      <label for="txtNombre">Nombre</label>
+      <input type="text" id="txtNombre" placeholder="Ingrese el nombre del cliente." required>
 
-      <label for="fecha">Fecha de la cita</label>
-      <input type="date" id="fecha" name="fecha" required>
+      <label for="txtApellido">Apellido:</label>
+      <input type="text" id="txtApellido" placeholder="Ingrese el apellido del cleinte." required />
 
-      <label for="hora">Hora</label>
-      <input type="time" id="hora" name="hora" required>
+      <label for="txtCedula">Número de cédula</label>
+      <input type="text" id="txtCedula" required pattern="[0-9]{9}" placeholder="Ej: 123456789">
 
-      <button type="submit">Agendar cita</button>
+      <label for="txtTelefono">Teléfono</label>
+      <input type="tel" id="txtTelefono" placeholder="Ingrese el numero de contacto." required>
+
+      <label for="txtFecha">Fecha de la cita</label>
+      <input type="date" id="txtFecha" required>
+
+      <label for="txtHora">Hora</label>
+      <input type="time" id="txtHora" required>
+
+      <button id="btnAdd" class="btn btn-success" type="submit">Agregar</button>
+      <button id="btnCancel" class="btn btn-success" type="button">Cancelar</button>
+
     </fieldset>
 
   </form>
@@ -65,37 +74,22 @@
     <thead>
       <tr>
         <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Cedula</th>
         <th>Teléfono</th>
         <th>Fecha</th>
         <th>Hora</th>
         <th>Estado</th>
+        <th>Acciones</th>
       </tr>
     </thead>
-
-    <tbody>
-      <tr>
-        <td>Juan Pérez</td>
-        <td>8888-8888</td>
-        <td>2026-02-25</td>
-        <td>10:00</td>
-        <td>Reservada</td>
-      </tr>
-
-      <tr>
-        <td>Ana López</td>
-        <td>8777-1234</td>
-        <td>2026-02-25</td>
-        <td>11:00</td>
-        <td>Reservada</td>
-      </tr>
-    </tbody>
-
+    <tbody id="tbodyClientes"></tbody>
   </table>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="./app.js"></script>
 
-
-    
 </body>
 
 
