@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de citas</title>
-    <link rel="stylesheet" href="estilos.css" />
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de citas</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
 </head>
 
 <body>
 
 <header class="header">
-
   <div class="logo-titulo">
     <i class="fi fi-brands-yelp"></i>
     <h1 class="title">Sistema de citas</h1>
   </div>
 
-
-  <nav class="nav-menu">
+  <nav>
     <ul class="nav-list">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="localidades.html">Localidades</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Localidades</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Nosotros</a></li>
     </ul>
   </nav>
-
 </header>
 
 <section class="registro">
-
   <h2 id="tituloForm">Registro de cita</h2>
 
   <form id="formCita">
@@ -39,43 +34,54 @@
 
       <input type="hidden" id="txtId" />
 
-      <label for="txtNombre">Nombre</label>
-      <input type="text" id="txtNombre" placeholder="Ingrese el nombre del cliente." required>
+      <div class="campo">
+        <label>Nombre</label>
+        <input type="text" id="txtNombre" required>
+      </div>
 
-      <label for="txtApellido">Apellido:</label>
-      <input type="text" id="txtApellido" placeholder="Ingrese el apellido del cleinte." required />
+      <div class="campo">
+        <label>Apellido</label>
+        <input type="text" id="txtApellido" required>
+      </div>
 
-      <label for="txtCedula">Número de cédula</label>
-      <input type="text" id="txtCedula" required pattern="[0-9]{9}" placeholder="Ej: 123456789">
+      <div class="campo">
+        <label>Cédula</label>
+        <input type="text" id="txtCedula" required>
+      </div>
 
-      <label for="txtTelefono">Teléfono</label>
-      <input type="tel" id="txtTelefono" placeholder="Ingrese el numero de contacto." required>
+      <div class="campo">
+        <label>Teléfono</label>
+        <input type="tel" id="txtTelefono" required>
+      </div>
 
-      <label for="txtFecha">Fecha de la cita</label>
-      <input type="date" id="txtFecha" required>
+      <div class="campo">
+        <label>Fecha</label>
+        <input type="date" id="txtFecha" required>
+      </div>
 
-      <label for="txtHora">Hora</label>
-      <input type="time" id="txtHora" required>
+      <div class="campo">
+        <label>Hora</label>
+        <select id="txtHora" required>
+          <option value="" disabled selected>Seleccione una hora</option>
+        </select>
+      </div>
 
-      <button id="btnAdd" class="btn btn-success" type="submit">Agregar</button>
-      <button id="btnCancel" class="btn btn-success" type="button">Cancelar</button>
+      <button id="btnAdd" type="submit">Guardar</button>
+      <button id="btnCancel" type="button">Cancelar</button>
 
     </fieldset>
-
   </form>
 </section>
 
 <section class="tabla">
-
-  <h2 >Citas registradas</h2>
+  <h2>Citas registradas</h2>
 
   <table class="tabla-citas">
-
     <thead>
       <tr>
         <th>Nombre</th>
         <th>Apellido</th>
-        <th>Cedula</th>
+        <th>Cédula</th>
         <th>Teléfono</th>
         <th>Fecha</th>
         <th>Hora</th>
@@ -91,6 +97,4 @@
 <script type="module" src="./app.js"></script>
 
 </body>
-
-
 </html>

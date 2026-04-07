@@ -1,120 +1,104 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 40px;
-  background-color: rgb(127, 204, 255);
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+body {
+  margin: 0;
+  background: #eef3f7;
+  font-size: 16px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #7fccff;
+}
 
 .logo-titulo {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.logo-titulo i {
-  font-size: 50px;
-  color: #2c2c2c;
+  gap: 10px;
 }
 
 .title {
   font-size: 24px;
-  margin: 0;
-  color: #2c2c2c;
-  font-family: 'Arial', sans-serif;
-  padding: 5px;
 }
 
 .nav-list {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   list-style: none;
-  margin: 0;
-  padding: 0 10px;
 }
 
 .nav-list a {
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+  font-weight: bold;
+  color: black;
 }
 
-/*  -------------------- */
 
-.registro {
-  max-width: 500px;
+.registro,
+.tabla {
+  width: 95%;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 30px;
-  background-color: #f9f9f9;
+  background: white;
   border-radius: 10px;
 }
 
-.registro form fieldset {
+
+.registro fieldset {
   border: none;
-  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.campo {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
-.registro h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.campo label {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.registro-cita form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.registro label {
-  font-size: 15px;
-  margin-bottom: 4px;
-}
-
-.registro input {
-  padding: 8px;
-  font-size: 14px;
+.campo input,
+.campo select {
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 100%;
-  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 15px;
 }
+
 
 .registro button {
-  margin-top: 10px;
+  grid-column: span 2;
   padding: 12px;
-
-  background-color: #2c2c2c;
-  color: white;
-
+  margin-top: 10px;
   border: none;
   border-radius: 6px;
+  background: #2c2c2c;
+  color: white;
   cursor: pointer;
 }
 
 .registro button:hover {
-  background-color: #444;
+  background: #444;
 }
 
-/*  -------------------- */
 
 .tabla {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
+  overflow-x: auto;
 }
 
-.tabla h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
 .tabla-citas {
   width: 100%;
   border-collapse: collapse;
@@ -123,17 +107,40 @@
 .tabla-citas th,
 .tabla-citas td {
   padding: 12px;
-  border-bottom: 1px solid #ccc;
-  text-align: left;
-  
+  border-bottom: 1px solid #ddd;
 }
 
 .tabla-citas th {
-  background-color: #f3f3f3;
+  background: #f3f3f3;
+}
+
+.tabla-citas tr:nth-child(even) {
+  background: #fafafa;
 }
 
 
-/*  -------------------- */
+.tabla button {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.btnEditar {
+  background: #3498db;
+  color: white;
+}
+
+.btnCancelar {
+  background: #e74c3c;
+  color: white;
+}
+
+.btnCompletar {
+  background: #2ecc71;
+  color: white;
+}
 
 .login {
   max-width: 350px;
@@ -152,11 +159,11 @@
 .login form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .login label {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .login input {
@@ -166,6 +173,7 @@
   border: 1px solid #ccc;
   border-radius: 6px;
 
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -183,4 +191,15 @@
 
 .login button:hover {
   background-color: #444;
+}
+
+
+@media (max-width: 768px) {
+  .registro fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  .registro button {
+    grid-column: span 1;
+  }
 }
