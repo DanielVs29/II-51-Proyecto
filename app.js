@@ -123,7 +123,6 @@ const limpiarFormulario = () => {
   txtTelefono.value = "";
   txtFecha.value = "";
   txtHora.value = "";
-
   tituloForm.textContent = "Registro de cita";
 };
 
