@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis Citas</title>
+
+<link rel="stylesheet" href="/css/estilos.css">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-titulo">
+    <i class="fi fi-brands-yelp"></i>
+    <h1 class="title">Sistema de citas</h1>
+  </div>
+
+  <nav>
+    <ul class="nav-list"></ul>
+  </nav>
+</header>
+
+<section class="tabla">
+  <h2>Mis citas</h2>
+
+  <table class="tabla-citas">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Servicio</th>
+        <th>Profesional</th>
+        <th>Estado</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+
+    <tbody id="tbodyMisCitas"></tbody>
+  </table>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="./js/header.js"></script>
+<script type="module" src="./js/clienteCitas.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de citas</title>
+  <link rel="stylesheet" href="/css/estilos.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-titulo">
+    <i class="fi fi-brands-yelp"></i>
+    <h1 class="title">Sistema de citas</h1>
+  </div>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="AgendarCita.html" id="menuCitas">Agendar Cita</a></li>
+      <li><a href="localidades.html">Localidades</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="dashboard">
+
+  <div class="card-resumen">
+    <h3>Pendientes</h3>
+    <p id="cardPendientes">0</p>
+  </div>
+
+  <div class="card-resumen">
+    <h3>Completadas</h3>
+    <p id="cardCompletadas">0</p>
+  </div>
+
+  <div class="card-resumen">
+    <h3>Canceladas</h3>
+    <p id="cardCanceladas">0</p>
+  </div>
+
+  <div class="card-resumen">
+    <h3>Hoy</h3>
+    <p id="cardHoy">0</p>
+  </div>
+
+</section>
+
+<section class="filtros-admin">
+
+  <input type="text" id="txtBuscar" placeholder="Buscar cliente o cédula">
+
+  <select id="selEstado">
+    <option value="">Todos los estados</option>
+    <option value="pendiente">Pendiente</option>
+    <option value="completada">Completada</option>
+    <option value="cancelada">Cancelada</option>
+  </select>
+
+  <input type="date" id="txtFiltroFecha">
+
+  <button id="btnLimpiarFiltros" class="btnEditarCita">Limpiar</button>
+
+</section>
+
+<section class="tabla">
+  <h2>Citas registradas</h2>
+
+  <table class="tabla-citas">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Cédula</th>
+        <th>Teléfono</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Estado</th>
+        <th>Profesional</th>
+        <th>Servicio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tbodyClientes"></tbody>
+  </table>
+</section>
+
+<div id="modalCita" class="modal hidden">
+
+  <div class="modal-contenido">
+
+    <h2 id="tituloModal">Editar cita</h2>
+
+    <form id="formModalCita">
+
+      <input type="hidden" id="modalId">
+
+      <div class="campo">
+        <label>Fecha</label>
+        <input type="date" id="modalFecha" required>
+      </div>
+
+      <div class="campo">
+        <label>Hora</label>
+        <select id="modalHora" required></select>
+      </div>
+
+      <div class="campo">
+        <label>Profesional</label>
+        <select id="modalProfesional" required></select>
+      </div>
+
+    <div class="modal-botones">
+      <button type="submit" id="btnGuardarModal" class="btnCompletar">
+        Guardar
+      </button>
+
+      <button type="button" id="btnCerrarModal" class="btnCancelar">
+        Cancelar
+      </button>
+    </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="./js/header.js"></script>
+<script type="module" src="./js/admin.js"></script>
+
+
+
+</body>
+</html>

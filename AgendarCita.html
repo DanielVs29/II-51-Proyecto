@@ -1,0 +1,63 @@
+<!-- AgendarCita.html AJUSTADO -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendar Cita</title>
+
+<link rel="stylesheet" href="/css/estilos.css">
+<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-titulo">
+    <i class="fi fi-brands-yelp"></i>
+    <h1 class="title">Sistema de citas</h1>
+  </div>
+
+  <nav>
+    <ul class="nav-list"></ul>
+  </nav>
+</header>
+
+<section class="registro">
+
+  <h2>Agendar cita</h2>
+
+  <form id="formCita">
+
+    <div class="campo">
+      <label>Servicio</label>
+      <select id="txtServicio"></select>
+    </div>
+
+    <div class="campo">
+      <label>Profesional</label>
+      <select id="txtProfesional"></select>
+    </div>
+
+    <div class="campo">
+      <label>Fecha</label>
+      <input type="date" id="txtFecha" required>
+    </div>
+
+    <div class="campo">
+      <label>Hora</label>
+      <select id="txtHora"></select>
+    </div>
+
+    <button type="submit">Agendar cita</button>
+
+  </form>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="./js/header.js"></script>
+<script type="module" src="./js/agendar.js"></script>
+
+</body>
+</html>

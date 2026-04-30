@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | Sistema de Citas</title>
+
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-titulo">
+    <i class="fi fi-brands-yelp"></i>
+    <h1 class="title">Sistema de citas</h1>
+  </div>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="login.html">Iniciar sesión</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="contenedor-auth">
+
+  <section class="login registro-box">
+    <h2>Crear cuenta</h2>
+    <p class="subtexto">
+      Regístrate para agendar citas y administrar tus reservas fácilmente.
+    </p>
+
+    <form id="formRegistro">
+
+      <div class="campo">
+        <label for="txtNombre">Nombre</label>
+        <input type="text" id="txtNombre" required>
+      </div>
+
+      <div class="campo">
+        <label for="txtApellido">Apellido</label>
+        <input type="text" id="txtApellido" required>
+      </div>
+
+      <div class="campo">
+        <label for="txtCedula">Cédula</label>
+        <input type="text" id="txtCedula" required>
+      </div>
+
+      <div class="campo">
+        <label for="txtTelefono">Teléfono</label>
+        <input type="tel" id="txtTelefono" required>
+      </div>
+
+      <div class="campo">
+        <label for="txtCorreo">Correo electrónico</label>
+        <input type="email" id="txtCorreo" required>
+      </div>
+
+      <div class="campo">
+        <label for="txtContrasena">Contraseña</label>
+        <input type="password" id="txtContrasena" required>
+      </div>
+
+      <button type="submit">Crear cuenta</button>
+
+    </form>
+
+    <p class="link-auth">
+      ¿Ya tienes cuenta?
+      <a href="login.html">Inicia sesión aquí</a>
+    </p>
+
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="./js/header.js"></script>
+<script type="module" src="./js/registro.js"></script>
+
+</body>
+</html>

@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Login | Sistema de Citas</title>
-  <link rel="stylesheet" href="estilos.css">
-      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+  <link rel="stylesheet" href="/css/estilos.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
 </head>
 <body>
 
 <header class="header">
-
   <div class="logo-titulo">
     <i class="fi fi-brands-yelp"></i>
     <h1 class="title">Sistema de citas</h1>
   </div>
 
+  <nav>
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="localidades.html">Localidades</a></li>
+
+    </ul>
+  </nav>
 </header>
 
 
@@ -22,19 +29,26 @@
 
   <h2>Iniciar sesión</h2>
 
-  <form action="index.html">
+  <form id="loginForm">
 
-    <label for="usuario">Usuario</label>
-    <input type="text" id="usuario" required>
+  <label for="usuario">Correo electrónico</label>
+  <input type="email" id="usuario" required>
 
-    <label for="password">Contraseña</label>
-    <input type="password" id="password" required>
+  <label for="password">Contraseña</label>
+  <input type="password" id="password" required>
 
-    <button type="submit">Ingresar</button>
+  <button type="submit">Ingresar</button>
 
-  </form>
+</form>
+
+    <p class="link-auth">
+      ¿No tienes cuenta?
+      <a href="registro.html">Crea tu cuenta aquí</a>
+    </p>
 
 </section>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="/js/login.js"></script>
 
 </body>
 </html>

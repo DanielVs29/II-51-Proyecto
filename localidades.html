@@ -1,29 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Localidades</title>
-    <link rel="stylesheet" href="estilos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localidades</title>
+  <link rel="stylesheet" href="/css/estilos.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
 </head>
+
+<body>
 
 <header class="header">
 
-  <h1 class="tittle">Sistema de citas</h1>
+  <div class="logo-titulo">
+    <i class="fi fi-brands-yelp"></i>
+    <h1 class="title">Sistema de citas</h1>
+  </div>
 
   <nav class="nav-menu">
     <ul class="nav-list">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="localidades.html">Localidades</a></li>
       <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="nosotros.html">Nosotros</a></li>
     </ul>
   </nav>
+
 </header>
 
+<main>
 
+  <h2>Nuestras Localidades</h2>
 
-<body>
-    <h2>Localidades</h2>
+  <section class="locations-container">
+
+    <div class="location-card">
+      <h3>Alajuela</h3>
+      <p>Oeste de la iglesia La Agonia, Av. Central Juan López del Corral, Provincia de Alajuela, Costa Rica.</p>
+      <span class="tag">Alajuela Centro</span>
+    </div>
+
+    <div class="location-card">
+      <h3>Heredia</h3>
+      <p>Avenida Central, calle 1, contiguo al Liceo de Heredia, Heredia, Costa Rica</p>
+      <span class="tag">Heredia Centro</span>
+    </div>
+
+    <div class="location-card">
+      <h3>San José</h3>
+      <p>Avenida 8, 100 metros al norte del supermercado, San José, Costa Rica</p>
+      <span class="tag">San José Centro</span>
+    </div>
+
+  </section>
+
+</main>
+
+<script type="module" src="./js/header.js"></script>
+
 </body>
 </html>

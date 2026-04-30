@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema de citas</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="/css/estilos.css" />
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
 </head>
 
@@ -18,83 +18,67 @@
 
   <nav>
     <ul class="nav-list">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Localidades</a></li>
-      <li><a href="#">Contacto</a></li>
-      <li><a href="#">Nosotros</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="AgendarCita.html" id="menuCitas">Agendar Cita</a></li>
+      <li><a href="localidades.html">Localidades</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
 </header>
 
-<section class="registro">
-  <h2 id="tituloForm">Registro de cita</h2>
+<main>
 
-  <form id="formCita">
-    <fieldset>
+<section class="hero">
+  <div class="hero-overlay">
+    <h2>Tu sistema de citas inteligente</h2>
+    <p>
+      Conecta negocios con clientes de forma simple: informa, muestra servicios y permite agendar en segundos.
+    </p>
 
-      <input type="hidden" id="txtId" />
-
-      <div class="campo">
-        <label>Nombre</label>
-        <input type="text" id="txtNombre" required>
-      </div>
-
-      <div class="campo">
-        <label>Apellido</label>
-        <input type="text" id="txtApellido" required>
-      </div>
-
-      <div class="campo">
-        <label>Cédula</label>
-        <input type="text" id="txtCedula" required>
-      </div>
-
-      <div class="campo">
-        <label>Teléfono</label>
-        <input type="tel" id="txtTelefono" required>
-      </div>
-
-      <div class="campo">
-        <label>Fecha</label>
-        <input type="date" id="txtFecha" required>
-      </div>
-
-      <div class="campo">
-        <label>Hora</label>
-        <select id="txtHora" required>
-          <option value="" disabled selected>Seleccione una hora</option>
-        </select>
-      </div>
-
-      <button id="btnAdd" type="submit">Guardar</button>
-      <button id="btnCancel" type="button">Cancelar</button>
-
-    </fieldset>
-  </form>
+    <a href="AgendarCita.html" class="btn-principal">Agendar ahora</a>
+  </div>
 </section>
 
-<section class="tabla">
-  <h2>Citas registradas</h2>
+  <section class="info">
+    <h2>¿Qué es este sistema?</h2>
+    <p>
+      Es una solución diseñada para que cualquier negocio pueda tener su propia página web funcional,
+      donde los clientes puedan conocer los servicios y reservar citas fácilmente sin complicaciones.
+    </p>
+  </section>
 
-  <table class="tabla-citas">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Cédula</th>
-        <th>Teléfono</th>
-        <th>Fecha</th>
-        <th>Hora</th>
-        <th>Estado</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody id="tbodyClientes"></tbody>
-  </table>
-</section>
+  <section class="servicios">
+    <h2>Servicios</h2>
 
+    <div class="servicios-grid">
+
+      <div class="servicio-card">
+        <h3>Consultas</h3>
+        <p>Atención personalizada según el tipo de negocio.</p>
+      </div>
+
+      <div class="servicio-card">
+        <h3>Agendamiento</h3>
+        <p>Reserva de citas en tiempo real desde la web.</p>
+      </div>
+
+      <div class="servicio-card">
+        <h3>Gestión</h3>
+        <p>Control de citas, estados y administración fácil.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="info">
+    <h2>¿Listo para agendar?</h2>
+    <p>Haz clic y reserva tu cita en segundos.</p>
+    <a href="AgendarCita.html" class="btn-secundario">Ir a agendar</a>
+  </section>
+
+</main>
+
+<script type="module" src="/js/header.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script type="module" src="./app.js"></script>
-
 </body>
 </html>
